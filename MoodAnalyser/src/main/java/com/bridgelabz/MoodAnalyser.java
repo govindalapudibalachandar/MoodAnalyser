@@ -3,11 +3,16 @@ package com.bridgelabz;
 public class MoodAnalyser {
 
 	public String analyserMood (String message) {
-        if(message.contains("Sad"))  //if condition for happy and sad
-            return "SAD";
-        else 
-        return "Happy";
-        
+    
+	//try and catch block
+        try {
+            if (message.contains("Sad"))  //if condition for happy or sad
+                return "SAD";
+            else
+                return "HAPPY";
+        }catch (NullPointerException e){
+            return "HAPPY";
+        }
 		
     }
 }

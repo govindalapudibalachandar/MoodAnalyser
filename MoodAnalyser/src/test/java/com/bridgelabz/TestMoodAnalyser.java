@@ -20,4 +20,10 @@ MoodAnalyser moodanalyser = new MoodAnalyser();
 	        String mood = moodanalyser.analyserMood("These Is A Hppy Mesage");
 	        Assert.assertEquals("HAPPY",mood);
 }
+		//test case for nullmood
+		  @Test
+		    public void givenNullMood_ShouldReturn_Happy() {
+		        String mood = moodanalyser.analyserMood(null);
+		        Assert.assertEquals("HAPPY",mood);
+}
 }
